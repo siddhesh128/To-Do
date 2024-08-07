@@ -30,7 +30,7 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #3e3c99;
+  background-color: #181935;
 }
 
 h1 {
@@ -81,6 +81,23 @@ button:focus-visible {
   padding: 8px;
   margin-bottom: 4px;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list li button {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.todo-list li button:hover {
+  background-color: #ff1c1c;
 }
 
 @media (prefers-color-scheme: light) {
@@ -100,5 +117,11 @@ button:focus-visible {
   .todo-list li {
     background-color: #e0e0e0;
     color: #333;
+  }
+  .todo-list li button {
+    background-color: #ff4c4c;
+  }
+  .todo-list li button:hover {
+    background-color: #ff1c1c;
   }
 }

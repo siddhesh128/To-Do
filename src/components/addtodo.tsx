@@ -12,6 +12,11 @@ const Addtodo = () => {
     }
   }
 
+  const handleDelete = (index: number) => {
+    const newTodos = todos.filter((_, todoIndex) => todoIndex !== index)
+    setTodos(newTodos)
+  }
+
   return (
     <div className="todo-container">
       <h1>Todo</h1>
@@ -21,7 +26,9 @@ const Addtodo = () => {
       </form>
       <ul className="todo-list">
         {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
+          <li key={index}>
+            {todo} <button onClick={() => handleDelete(index)}>Delete</button>
+          </li>
         ))}
       </ul>
     </div>
